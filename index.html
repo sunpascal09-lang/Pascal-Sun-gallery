@@ -3,81 +3,10 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>PASCAL SUN — Contemporary Tahitian Art</title>
-  <meta name="description" content="Galerie officielle de PASCAL SUN — art contemporain tahitien, œuvres originales et collections privées." />
-  <link rel="stylesheet" href="assets/style.css" />
+  <title>Admin — PASCAL SUN</title>
   <script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
 </head>
 <body>
-  <header class="site-header">
-    <a class="brand" href="#top">PASCAL SUN</a>
-    <nav>
-      <a href="#gallery">Œuvres</a>
-      <a href="#artist">Artiste</a>
-      <a href="#contact">Contact</a>
-    </nav>
-  </header>
-
-  <main id="top">
-    <section class="hero">
-      <div class="hero-image" id="heroImage"></div>
-      <div class="hero-text">
-        <p class="eyebrow">Contemporary Tahitian Art</p>
-        <h1>PASCAL SUN</h1>
-        <p class="intro">Une galerie personnelle, silencieuse et lumineuse — entre élégance contemporaine, mémoire du Pacifique et présence humaine.</p>
-        <a class="button" href="#gallery">Découvrir les œuvres</a>
-      </div>
-    </section>
-
-    <section class="statement">
-      <p>Chaque œuvre est présentée comme une pièce de collection : peu de bruit, beaucoup d’espace, une émotion directe.</p>
-    </section>
-
-    <section id="gallery" class="gallery-section">
-      <div class="section-title">
-        <p class="eyebrow">Original works</p>
-        <h2>Œuvres disponibles</h2>
-      </div>
-      <div id="galleryGrid" class="gallery-grid"></div>
-    </section>
-
-    <section id="artist" class="artist-section">
-      <div>
-        <p class="eyebrow">The artist</p>
-        <h2>Une signature contemporaine inspirée par Tahiti.</h2>
-      </div>
-      <p>PASCAL SUN développe un univers où le trait, la lumière et les silences composent une esthétique tropicale haut de gamme. Ses œuvres mêlent féminité, scènes de vie, horizon marin et minimalisme graphique.</p>
-    </section>
-
-    <section id="contact" class="contact-section">
-      <p class="eyebrow">Private sales</p>
-      <h2>Acquisition & commandes privées</h2>
-      <p>Pour connaître le prix, réserver une œuvre ou demander une commande personnalisée :</p>
-      <a class="button dark" href="mailto:sun.pascal09@gmail.com?subject=Demande%20d'information%20-%20PASCAL%20SUN">sun.pascal09@gmail.com</a>
-    </section>
-  </main>
-
-  <footer>
-    <span>© PASCAL SUN</span>
-    <a href="/admin/">Administration</a>
-  </footer>
-
-  <dialog id="artDialog">
-    <button class="close" onclick="window.artDialog.close()">×</button>
-    <img id="dialogImage" alt="" />
-    <div class="dialog-content">
-      <p id="dialogCollection" class="eyebrow"></p>
-      <h3 id="dialogTitle"></h3>
-      <p id="dialogMeta"></p>
-      <p id="dialogDescription"></p>
-      <p id="dialogPrice" class="price"></p>
-      <div class="actions">
-        <a id="dialogBuy" class="button dark" href="#" target="_blank" rel="noopener">Acheter</a>
-        <a id="dialogAsk" class="button" href="#">Demander le prix</a>
-      </div>
-    </div>
-  </dialog>
-
-  <script src="assets/app.js"></script>
+  <script src="https://unpkg.com/decap-cms@^3.0.0/dist/decap-cms.js"></script>
 </body>
 </html>

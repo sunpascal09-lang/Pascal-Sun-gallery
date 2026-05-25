@@ -1,0 +1,34 @@
+backend:
+  name: git-gateway
+  branch: main
+
+media_folder: "assets/uploads"
+public_folder: "/assets/uploads"
+
+locale: "fr"
+
+collections:
+  - name: "gallery"
+    label: "Galerie PASCAL SUN"
+    files:
+      - name: "artworks"
+        label: "Œuvres"
+        file: "artworks.json"
+        format: "json"
+        fields:
+          - label: "Liste des œuvres"
+            name: "artworks"
+            widget: "list"
+            summary: "{{fields.title}} — {{fields.price}}"
+            fields:
+              - { label: "Identifiant", name: "id", widget: "string", hint: "exemple: oeuvre-01" }
+              - { label: "Titre", name: "title", widget: "string" }
+              - { label: "Collection", name: "collection", widget: "string", required: false }
+              - { label: "Année", name: "year", widget: "string", required: false }
+              - { label: "Technique", name: "medium", widget: "string", required: false }
+              - { label: "Dimensions", name: "dimensions", widget: "string", required: false }
+              - { label: "Prix", name: "price", widget: "string", required: false, hint: "ex: 1200 € ou Prix sur demande" }
+              - { label: "Statut", name: "status", widget: "select", options: ["Disponible", "Réservé", "Vendu"], default: "Disponible" }
+              - { label: "Photo", name: "image", widget: "image" }
+              - { label: "Lien PayPal", name: "paypal_link", widget: "string", required: false }
+              - { label: "Description", name: "description", widget: "text", required: false }
