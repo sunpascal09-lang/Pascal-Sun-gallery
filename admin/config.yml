@@ -1,0 +1,17 @@
+backend:
+  name: github
+  repo: sunpascal09-lang/Pascal-Sun-gallery
+  branch: main
+
+media_folder: "images/uploads"
+public_folder: "/images/uploads"
+
+collections:
+  - name: "artworks"
+    label: "Œuvres"
+    files:
+      - file: "artworks.json"
+        label: "Galerie"
+        name: "galerie"
+        fields:
+          - { label: "Œuvres", name: "oeuvres", widget: "list" }
