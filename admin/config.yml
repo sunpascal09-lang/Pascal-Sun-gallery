@@ -1,6 +1,5 @@
 backend:
-  name: github
-  repo: sunpascal09-lang/Pascal-Sun-gallery
+  name: git-gateway
   branch: main
 
 media_folder: "images/uploads"
@@ -14,4 +13,6 @@ collections:
         label: "Galerie"
         name: "galerie"
         fields:
-          - { label: "Œuvres", name: "oeuvres", widget: "list" }
+          - label: "Œuvres"
+            name: "oeuvres"
+            widget: "list"
