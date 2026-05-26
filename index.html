@@ -4,14 +4,79 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Galerie Pascal Sun</title>
-</head>
-<body style="background:black;color:white;text-align:center;font-family:sans-serif;">
-  <h1>Galerie Pascal Sun</h1>
 
-  <img src="oeuvre-01.jpeg" width="300"><br><br>
-  <img src="oeuvre-02.jpeg" width="300"><br><br>
-  <img src="oeuvre-03.jpeg" width="300"><br><br>
-  <img src="oeuvre-04.jpeg" width="300"><br><br>
+  <style>
+    body{
+      margin:0;
+      background:black;
+      color:white;
+      font-family:Arial,sans-serif;
+    }
+
+    header{
+      position:fixed;
+      top:0;
+      width:100%;
+      background:#111;
+      padding:20px;
+      text-align:center;
+      z-index:1000;
+    }
+
+    header a{
+      color:white;
+      margin:0 15px;
+      text-decoration:none;
+      font-weight:bold;
+    }
+
+    section{
+      min-height:100vh;
+      padding-top:100px;
+      text-align:center;
+    }
+
+    img{
+      width:80%;
+      max-width:500px;
+      margin-top:20px;
+      border-radius:10px;
+    }
+
+    h1{
+      margin-top:40px;
+    }
+  </style>
+</head>
+
+<body>
+
+<header>
+  <a href="#home">Accueil</a>
+  <a href="#oeuvres">Œuvres</a>
+  <a href="#contact">Contact</a>
+</header>
+
+<section id="home">
+  <h1>Galerie Pascal Sun</h1>
+  <p>Bienvenue dans ma galerie artistique.</p>
+  <img src="oeuvre-01.jpeg">
+</section>
+
+<section id="oeuvres">
+  <h1>Œuvres</h1>
+
+  <img src="oeuvre-02.jpeg"><br><br>
+  <img src="oeuvre-03.jpeg"><br><br>
+  <img src="oeuvre-04.jpeg">
+
+</section>
+
+<section id="contact">
+  <h1>Contact</h1>
+  <p>Instagram : @pascalsunart</p>
+  <p>Email : contact@pascalsun.com</p>
+</section>
 
 </body>
 </html>
