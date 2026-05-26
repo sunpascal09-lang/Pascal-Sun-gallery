@@ -1,82 +1,286 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Galerie Pascal Sun</title>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
 
-  <style>
-    body{
-      margin:0;
-      background:black;
-      color:white;
-      font-family:Arial,sans-serif;
-    }
+<title>Galerie Pascal Sun</title>
 
-    header{
-      position:fixed;
-      top:0;
-      width:100%;
-      background:#111;
-      padding:20px;
-      text-align:center;
-      z-index:1000;
-    }
+<style>
 
-    header a{
-      color:white;
-      margin:0 15px;
-      text-decoration:none;
-      font-weight:bold;
-    }
+html{
+scroll-behavior:smooth;
+}
 
-    section{
-      min-height:100vh;
-      padding-top:100px;
-      text-align:center;
-    }
+body{
+margin:0;
+font-family:Arial,sans-serif;
+background:black;
+color:white;
+overflow-x:hidden;
+}
 
-    img{
-      width:80%;
-      max-width:500px;
-      margin-top:20px;
-      border-radius:10px;
-    }
+header{
+position:fixed;
+top:0;
+width:100%;
+background:rgba(0,0,0,0.9);
+padding:20px;
+text-align:center;
+z-index:1000;
+backdrop-filter:blur(10px);
+}
 
-    h1{
-      margin-top:40px;
-    }
-  </style>
+header a{
+color:white;
+text-decoration:none;
+margin:0 20px;
+font-weight:bold;
+transition:0.3s;
+}
+
+header a:hover{
+color:#d4af37;
+}
+
+.hero{
+height:100vh;
+display:flex;
+flex-direction:column;
+justify-content:center;
+align-items:center;
+text-align:center;
+padding:20px;
+background:linear-gradient(to bottom, #000000, #111111);
+}
+
+.hero h1{
+font-size:60px;
+margin-bottom:20px;
+animation:fadeIn 2s ease;
+}
+
+.hero p{
+font-size:22px;
+max-width:700px;
+line-height:1.6;
+color:#cccccc;
+animation:fadeIn 3s ease;
+}
+
+.button{
+margin-top:30px;
+padding:15px 35px;
+border:2px solid white;
+color:white;
+text-decoration:none;
+transition:0.4s;
+border-radius:8px;
+}
+
+.button:hover{
+background:white;
+color:black;
+}
+
+section{
+padding:120px 20px;
+text-align:center;
+}
+
+.section-title{
+font-size:42px;
+margin-bottom:50px;
+}
+
+.about{
+max-width:900px;
+margin:auto;
+font-size:20px;
+line-height:1.8;
+color:#dddddd;
+}
+
+.gallery{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
+gap:30px;
+max-width:1200px;
+margin:auto;
+}
+
+.gallery img{
+width:100%;
+border-radius:15px;
+transition:0.5s;
+cursor:pointer;
+box-shadow:0 0 20px rgba(255,255,255,0.1);
+}
+
+.gallery img:hover{
+transform:scale(1.03);
+box-shadow:0 0 30px rgba(255,255,255,0.3);
+}
+
+.contact{
+font-size:22px;
+line-height:2;
+}
+
+footer{
+padding:40px;
+text-align:center;
+background:#111;
+color:#888;
+}
+
+.lightbox{
+position:fixed;
+top:0;
+left:0;
+width:100%;
+height:100%;
+background:rgba(0,0,0,0.95);
+display:none;
+justify-content:center;
+align-items:center;
+z-index:5000;
+}
+
+.lightbox img{
+max-width:90%;
+max-height:90%;
+border-radius:10px;
+}
+
+@keyframes fadeIn{
+from{
+opacity:0;
+transform:translateY(30px);
+}
+to{
+opacity:1;
+transform:translateY(0);
+}
+}
+
+</style>
 </head>
 
 <body>
 
 <header>
-  <a href="#home">Accueil</a>
-  <a href="#oeuvres">Œuvres</a>
-  <a href="#contact">Contact</a>
+<a href="#home">Accueil</a>
+<a href="#about">À propos</a>
+<a href="#gallery">Œuvres</a>
+<a href="#contact">Contact</a>
 </header>
 
-<section id="home">
-  <h1>Galerie Pascal Sun</h1>
-  <p>Bienvenue dans ma galerie artistique.</p>
-  <img src="oeuvre-01.jpeg">
+<section class="hero" id="home">
+
+<h1>Galerie Pascal Sun</h1>
+
+<p>
+Bienvenue dans l’univers artistique de Pascal Sun.
+Une galerie digitale élégante dédiée à l’émotion,
+à la lumière et à l’expression contemporaine.
+</p>
+
+<a href="#gallery" class="button">
+Découvrir les œuvres
+</a>
+
 </section>
 
-<section id="oeuvres">
-  <h1>Œuvres</h1>
+<section id="about">
 
-  <img src="oeuvre-02.jpeg"><br><br>
-  <img src="oeuvre-03.jpeg"><br><br>
-  <img src="oeuvre-04.jpeg">
+<h2 class="section-title">À propos</h2>
+
+<div class="about">
+
+<p>
+Pascal Sun développe une approche artistique moderne,
+mêlant émotion, abstraction et élégance visuelle.
+</p>
+
+<p>
+Chaque œuvre cherche à créer une connexion intime
+entre la matière, la lumière et le regard du visiteur.
+</p>
+
+<p>
+Cette galerie présente une sélection d’œuvres originales
+dans un environnement minimaliste et immersif.
+</p>
+
+</div>
+
+</section>
+
+<section id="gallery">
+
+<h2 class="section-title">Œuvres</h2>
+
+<div class="gallery">
+
+<img src="oeuvre-01.jpeg" onclick="openImage(this.src)">
+<img src="oeuvre-02.jpeg" onclick="openImage(this.src)">
+<img src="oeuvre-03.jpeg" onclick="openImage(this.src)">
+<img src="oeuvre-04.jpeg" onclick="openImage(this.src)">
+
+</div>
 
 </section>
 
 <section id="contact">
-  <h1>Contact</h1>
-  <p>Instagram : @pascalsunart</p>
-  <p>Email : contact@pascalsun.com</p>
+
+<h2 class="section-title">Contact</h2>
+
+<div class="contact">
+
+<p>
+Instagram :
+<br>
+<a href="https://instagram.com/pascalsunart"
+style="color:white;">
+@pascalsunart
+</a>
+</p>
+
+<p>
+Email :
+<br>
+contact@pascalsun.com
+</p>
+
+</div>
+
 </section>
+
+<footer>
+
+© 2025 Galerie Pascal Sun — Tous droits réservés
+
+</footer>
+
+<div class="lightbox" id="lightbox" onclick="closeImage()">
+
+<img id="lightbox-img">
+
+</div>
+
+<script>
+
+function openImage(src){
+document.getElementById("lightbox").style.display="flex";
+document.getElementById("lightbox-img").src=src;
+}
+
+function closeImage(){
+document.getElementById("lightbox").style.display="none";
+}
+
+</script>
 
 </body>
 </html>
