@@ -136,7 +136,7 @@ transition:0.5s;
 cursor:pointer;
 box-shadow:0 0 20px rgba(255,255,255,0.1);
 object-fit:cover;
-animation:fadeIn 1.8s ease;
+animation:float 6s ease-in-out infinite;
 }
 
 .gallery img:hover{
@@ -144,6 +144,11 @@ transform:scale(1.06) rotate(0.5deg);
 box-shadow:0 0 50px rgba(255,255,255,0.5);
 filter:brightness(1.1) contrast(1.05);
 }
+@keyframes float{
+0%{transform:translateY(0px);}
+50%{transform:translateY(-8px);}
+100%{transform:translateY(0px);}
+}  
 .gallery h3{
 margin-top:15px;
 margin-bottom:40px;
