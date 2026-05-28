@@ -39,12 +39,29 @@ text-decoration:none;
 margin:0 20px;
 font-weight:bold;
 transition:0.3s;
+position:relative;
+letter-spacing:1px;  
 }
 
 header a:hover{
 color:#d4af37;
 text-shadow:0 0 10px rgba(212,175,55,0.8);
+transform:translateY(-2px);  
 }
+header a::after{
+content:"";
+position:absolute;
+left:0;
+bottom:-6px;
+width:0%;
+height:2px;
+background:white;
+transition:0.4s;
+}
+
+header a:hover::after{
+width:100%;
+}  
 .button{
 display:inline-block;
 margin-top:30px;
